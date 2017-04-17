@@ -10,11 +10,20 @@
     <script src="./lib/myScore.js"></script>
     
     <script>
-        var log = console.log;
-        var aa = {
-
+        var log1 = console.log;
+        var o = {
+            age: 222
         };
-        _.each({one:1, two: 9, thred: 109}, log)
+        var  ArgString               = '[object Arguments]';
+        function isArguments(obj){
+            return Object.prototype.toString.call(obj) === ArgString;
+        }
+        var log = function(){
+            console.log(111)
+            console.log(isArguments(arguments))
+        }
+        log()
+       // _.each({one:1, two: 9, thred: 109}, log)
     </script>
     <script src="./lib/testMyScore.js"></script>
 </body>
